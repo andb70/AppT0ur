@@ -22,10 +22,9 @@ import {NodeOfView, ObjectOfView} from '../models/ObjectOfView';
 })
 export class NodeComponent implements AfterViewInit {
 
-  test = '';
   state: ITreeState;
   nodes: NodeOfView[] = [];
-  activeID: number;
+
   @ViewChild('tree') tree;
 
   actionMapping: IActionMapping = {
@@ -49,13 +48,13 @@ export class NodeComponent implements AfterViewInit {
     this.nodes = [service.root];
     service.route.subscribe((node: ObjectOfView) => {
       console.log('Node route', node);
-      this.activate(node);
+      // this.activate(node);
     });
     service.optionsChange.subscribe((node: ObjectOfView) => {
       console.log('Node optionsChange', node);
     });
   }
-  activate (node) {
+ /* activate (node) {
     const t = this.tree.treeModel;
     const activeNode = t.getActiveNode();
     if (activeNode) {
@@ -65,13 +64,13 @@ export class NodeComponent implements AfterViewInit {
     console.log('NewNode', newNode);
     newNode.setIsActive(true);
     t.update();
-  }
+  }*/
 
   ngAfterViewInit() {
     console.log('ViewChild', this.tree);
     this.tree.treeModel.expandAll();
     this.cdRef.detectChanges();
-    this.activate(this.tree.treeModel.getNodeById(this.nodes[0].id));
+    // this.activate(this.tree.treeModel.getNodeById(this.nodes[0].id));
   }
 
   onObjMouseOver(index) {

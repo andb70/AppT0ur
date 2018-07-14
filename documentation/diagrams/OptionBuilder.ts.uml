@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JavaScript-modules-diagram</ID>
+  <OriginalElement>C:/Users/andb7/WebstormProjects/AppT0ur/src/app/models/OptionBuilder.ts</OriginalElement>
+  <nodes>
+    <node x="3.5" y="101.0">C:/Users/andb7/WebstormProjects/AppT0ur/src/app/models/OptionBuilder.ts#ObjectID#8;</node>
+    <node x="0.0" y="0.0">C:/Users/andb7/WebstormProjects/AppT0ur/src/app/models/object-id.enum.ts#ObjectID#0;</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="C:/Users/andb7/WebstormProjects/AppT0ur/src/app/models/OptionBuilder.ts#ObjectID#8;" target="C:/Users/andb7/WebstormProjects/AppT0ur/src/app/models/object-id.enum.ts#ObjectID#0;">
+      <point x="0.0" y="-25.5" />
+      <point x="0.0" y="25.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="84.0" y="76.0" />
+  <SelectedNodes>
+    <node>C:/Users/andb7/WebstormProjects/AppT0ur/src/app/models/object-id.enum.ts#ObjectID#0;</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>All</Category>
+  </Categories>
+  <VISIBILITY>Details</VISIBILITY>
+</Diagram>
+

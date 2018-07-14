@@ -11,7 +11,7 @@ export class AppComponent {
   title = 'appT0urist';
 
   constructor(public service: ArchitectService) {
-    // this.homeRedirect();
+    this.homeRedirect();
   }
 
   homeRedirect() {

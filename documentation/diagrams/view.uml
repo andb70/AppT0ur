@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JavaScript-modules-diagram</ID>
+  <OriginalElement>C:/Users/andb7/WebstormProjects/AppT0ur/src/app/view</OriginalElement>
+  <nodes>
+    <node x="0.0" y="112.0">C:/Users/andb7/WebstormProjects/AppT0ur/node_modules/@angular/core/testing/src/async.d.ts#async#0;</node>
+    <node x="354.00000000000006" y="112.0">C:/Users/andb7/WebstormProjects/AppT0ur/node_modules/@angular/core/testing/src/component_fixture.d.ts#ComponentFixture#302;</node>
+    <node x="602.0" y="0.0">Component;</node>
+    <node x="169.00000000000006" y="112.0">C:/Users/andb7/WebstormProjects/AppT0ur/node_modules/@angular/core/testing/src/test_bed.d.ts#TestBed#1089;</node>
+    <node x="265.00000000000006" y="224.0">C:/Users/andb7/WebstormProjects/AppT0ur/src/app/view/view.component.spec.ts#ComponentFixture#16;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/view/view.component.spec.ts#TestBed#34;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/view/view.component.spec.ts#ViewComponent#84;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/view/view.component.spec.ts#async#9;</node>
+    <node x="593.0" y="101.0">C:/Users/andb7/WebstormProjects/AppT0ur/src/app/view/view.component.ts#Component#8;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/view/view.component.ts#ViewComponent#42;</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="C:/Users/andb7/WebstormProjects/AppT0ur/src/app/view/view.component.spec.ts#ComponentFixture#16;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/view/view.component.spec.ts#TestBed#34;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/view/view.component.spec.ts#ViewComponent#84;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/view/view.component.spec.ts#async#9;" target="C:/Users/andb7/WebstormProjects/AppT0ur/node_modules/@angular/core/testing/src/component_fixture.d.ts#ComponentFixture#302;">
+      <point x="23.125" y="-58.5" />
+      <point x="380.62500000000006" y="194.0" />
+      <point x="463.50000000000006" y="194.0" />
+      <point x="0.0" y="25.5" />
+    </edge>
+    <edge source="C:/Users/andb7/WebstormProjects/AppT0ur/src/app/view/view.component.spec.ts#ComponentFixture#16;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/view/view.component.spec.ts#TestBed#34;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/view/view.component.spec.ts#ViewComponent#84;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/view/view.component.spec.ts#async#9;" target="C:/Users/andb7/WebstormProjects/AppT0ur/node_modules/@angular/core/testing/src/async.d.ts#async#0;">
+      <point x="-69.375" y="-58.5" />
+      <point x="288.12500000000006" y="204.0" />
+      <point x="74.5" y="204.0" />
+      <point x="0.0" y="25.5" />
+    </edge>
+    <edge source="C:/Users/andb7/WebstormProjects/AppT0ur/src/app/view/view.component.spec.ts#ComponentFixture#16;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/view/view.component.spec.ts#TestBed#34;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/view/view.component.spec.ts#ViewComponent#84;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/view/view.component.spec.ts#async#9;" target="C:/Users/andb7/WebstormProjects/AppT0ur/src/app/view/view.component.ts#Component#8;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/view/view.component.ts#ViewComponent#42;">
+      <point x="69.375" y="-58.5" />
+      <point x="426.87500000000006" y="204.0" />
+      <point x="674.0" y="204.0" />
+      <point x="0.0" y="36.5" />
+    </edge>
+    <edge source="C:/Users/andb7/WebstormProjects/AppT0ur/src/app/view/view.component.ts#Component#8;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/view/view.component.ts#ViewComponent#42;" target="Component;">
+      <point x="0.0" y="-36.5" />
+      <point x="0.0" y="25.5" />
+    </edge>
+    <edge source="C:/Users/andb7/WebstormProjects/AppT0ur/src/app/view/view.component.spec.ts#ComponentFixture#16;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/view/view.component.spec.ts#TestBed#34;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/view/view.component.spec.ts#ViewComponent#84;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/view/view.component.spec.ts#async#9;" target="C:/Users/andb7/WebstormProjects/AppT0ur/node_modules/@angular/core/testing/src/test_bed.d.ts#TestBed#1089;">
+      <point x="-23.125" y="-58.5" />
+      <point x="334.37500000000006" y="194.0" />
+      <point x="251.50000000000006" y="194.0" />
+      <point x="0.0" y="25.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="377.5" y="170.5" />
+  <SelectedNodes>
+    <node>C:/Users/andb7/WebstormProjects/AppT0ur/src/app/view/view.component.ts#Component#8;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/view/view.component.ts#ViewComponent#42;</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>All</Category>
+  </Categories>
+  <VISIBILITY>Details</VISIBILITY>
+</Diagram>
+

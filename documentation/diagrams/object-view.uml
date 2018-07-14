@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JavaScript-modules-diagram</ID>
+  <OriginalElement>C:/Users/andb7/WebstormProjects/AppT0ur/src/app/object-view</OriginalElement>
+  <nodes>
+    <node x="539.0" y="0.0">C:/Users/andb7/WebstormProjects/AppT0ur/src/app/models/ObjectOfView.ts#ObjectOfView#907;</node>
+    <node x="367.0" y="0.0">C:/Users/andb7/WebstormProjects/AppT0ur/node_modules/rxjs/internal/Subscription.d.ts#Subscription#59;</node>
+    <node x="1127.0" y="0.0">C:/Users/andb7/WebstormProjects/AppT0ur/src/app/architect.service.ts#ArchitectService#2048;</node>
+    <node x="332.5" y="188.0">C:/Users/andb7/WebstormProjects/AppT0ur/node_modules/@angular/core/testing/src/async.d.ts#async#0;</node>
+    <node x="756.5" y="188.0">C:/Users/andb7/WebstormProjects/AppT0ur/node_modules/@angular/core/testing/src/component_fixture.d.ts#ComponentFixture#302;</node>
+    <node x="0.0" y="0.0">Component;</node>
+    <node x="907.0" y="0.0">C:/Users/andb7/WebstormProjects/AppT0ur/node_modules/@angular/core/src/metadata/lifecycle_hooks.d.ts#OnInit#1088;</node>
+    <node x="719.0" y="0.0">C:/Users/andb7/WebstormProjects/AppT0ur/src/app/models/object-id.enum.ts#ObjectID#0;</node>
+    <node x="382.0" y="366.0">C:/Users/andb7/WebstormProjects/AppT0ur/src/app/object-view/object-view.component.spec.ts#ComponentFixture#16;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/object-view/object-view.component.spec.ts#ObjectViewComponent#84;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/object-view/object-view.component.spec.ts#TestBed#34;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/object-view/object-view.component.spec.ts#async#9;</node>
+    <node x="501.5" y="111.0">C:/Users/andb7/WebstormProjects/AppT0ur/src/app/object-view/object-view.component.ts#ActivatedRoute#216;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/object-view/object-view.component.ts#ArchitectService#57;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/object-view/object-view.component.ts#Component#8;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/object-view/object-view.component.ts#ObjectID#112;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/object-view/object-view.component.ts#ObjectOfView#163;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/object-view/object-view.component.ts#ObjectViewComponent#292;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/object-view/object-view.component.ts#OnInit#19;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/object-view/object-view.component.ts#Subscription#264;</node>
+    <node x="164.0" y="0.0">C:/Users/andb7/WebstormProjects/AppT0ur/node_modules/@angular/router/src/router_state.d.ts#ActivatedRoute#1510;</node>
+    <node x="147.5" y="188.0">C:/Users/andb7/WebstormProjects/AppT0ur/node_modules/@angular/core/testing/src/test_bed.d.ts#TestBed#1089;</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="C:/Users/andb7/WebstormProjects/AppT0ur/src/app/object-view/object-view.component.ts#ActivatedRoute#216;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/object-view/object-view.component.ts#ArchitectService#57;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/object-view/object-view.component.ts#Component#8;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/object-view/object-view.component.ts#ObjectID#112;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/object-view/object-view.component.ts#ObjectOfView#163;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/object-view/object-view.component.ts#ObjectViewComponent#292;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/object-view/object-view.component.ts#OnInit#19;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/object-view/object-view.component.ts#Subscription#264;" target="C:/Users/andb7/WebstormProjects/AppT0ur/node_modules/@angular/core/src/metadata/lifecycle_hooks.d.ts#OnInit#1088;">
+      <point x="67.14285714285711" y="-102.5" />
+      <point x="686.1428571428571" y="81.0" />
+      <point x="1007.0" y="81.0" />
+      <point x="0.0" y="25.5" />
+    </edge>
+    <edge source="C:/Users/andb7/WebstormProjects/AppT0ur/src/app/object-view/object-view.component.ts#ActivatedRoute#216;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/object-view/object-view.component.ts#ArchitectService#57;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/object-view/object-view.component.ts#Component#8;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/object-view/object-view.component.ts#ObjectID#112;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/object-view/object-view.component.ts#ObjectOfView#163;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/object-view/object-view.component.ts#ObjectViewComponent#292;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/object-view/object-view.component.ts#OnInit#19;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/object-view/object-view.component.ts#Subscription#264;" target="C:/Users/andb7/WebstormProjects/AppT0ur/src/app/models/object-id.enum.ts#ObjectID#0;">
+      <point x="33.571428571428555" y="-102.5" />
+      <point x="652.5714285714286" y="71.0" />
+      <point x="803.0" y="71.0" />
+      <point x="0.0" y="25.5" />
+    </edge>
+    <edge source="C:/Users/andb7/WebstormProjects/AppT0ur/src/app/object-view/object-view.component.ts#ActivatedRoute#216;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/object-view/object-view.component.ts#ArchitectService#57;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/object-view/object-view.component.ts#Component#8;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/object-view/object-view.component.ts#ObjectID#112;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/object-view/object-view.component.ts#ObjectOfView#163;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/object-view/object-view.component.ts#ObjectViewComponent#292;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/object-view/object-view.component.ts#OnInit#19;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/object-view/object-view.component.ts#Subscription#264;" target="C:/Users/andb7/WebstormProjects/AppT0ur/node_modules/@angular/router/src/router_state.d.ts#ActivatedRoute#1510;">
+      <point x="-67.14285714285722" y="-102.5" />
+      <point x="551.8571428571428" y="81.0" />
+      <point x="255.5" y="81.0" />
+      <point x="0.0" y="25.5" />
+    </edge>
+    <edge source="C:/Users/andb7/WebstormProjects/AppT0ur/src/app/object-view/object-view.component.ts#ActivatedRoute#216;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/object-view/object-view.component.ts#ArchitectService#57;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/object-view/object-view.component.ts#Component#8;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/object-view/object-view.component.ts#ObjectID#112;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/object-view/object-view.component.ts#ObjectOfView#163;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/object-view/object-view.component.ts#ObjectViewComponent#292;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/object-view/object-view.component.ts#OnInit#19;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/object-view/object-view.component.ts#Subscription#264;" target="C:/Users/andb7/WebstormProjects/AppT0ur/src/app/architect.service.ts#ArchitectService#2048;">
+      <point x="100.71428571428572" y="-102.5" />
+      <point x="719.7142857142858" y="91.0" />
+      <point x="1206.0" y="91.0" />
+      <point x="0.0" y="25.5" />
+    </edge>
+    <edge source="C:/Users/andb7/WebstormProjects/AppT0ur/src/app/object-view/object-view.component.ts#ActivatedRoute#216;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/object-view/object-view.component.ts#ArchitectService#57;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/object-view/object-view.component.ts#Component#8;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/object-view/object-view.component.ts#ObjectID#112;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/object-view/object-view.component.ts#ObjectOfView#163;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/object-view/object-view.component.ts#ObjectViewComponent#292;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/object-view/object-view.component.ts#OnInit#19;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/object-view/object-view.component.ts#Subscription#264;" target="C:/Users/andb7/WebstormProjects/AppT0ur/node_modules/rxjs/internal/Subscription.d.ts#Subscription#59;">
+      <point x="-33.57142857142861" y="-102.5" />
+      <point x="585.4285714285714" y="71.0" />
+      <point x="443.0" y="71.0" />
+      <point x="0.0" y="25.5" />
+    </edge>
+    <edge source="C:/Users/andb7/WebstormProjects/AppT0ur/src/app/object-view/object-view.component.spec.ts#ComponentFixture#16;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/object-view/object-view.component.spec.ts#ObjectViewComponent#84;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/object-view/object-view.component.spec.ts#TestBed#34;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/object-view/object-view.component.spec.ts#async#9;" target="C:/Users/andb7/WebstormProjects/AppT0ur/src/app/object-view/object-view.component.ts#ActivatedRoute#216;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/object-view/object-view.component.ts#ArchitectService#57;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/object-view/object-view.component.ts#Component#8;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/object-view/object-view.component.ts#ObjectID#112;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/object-view/object-view.component.ts#ObjectOfView#163;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/object-view/object-view.component.ts#ObjectViewComponent#292;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/object-view/object-view.component.ts#OnInit#19;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/object-view/object-view.component.ts#Subscription#264;">
+      <point x="32.75" y="-58.5" />
+      <point x="545.75" y="336.0" />
+      <point x="619.0" y="336.0" />
+      <point x="0.0" y="102.5" />
+    </edge>
+    <edge source="C:/Users/andb7/WebstormProjects/AppT0ur/src/app/object-view/object-view.component.spec.ts#ComponentFixture#16;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/object-view/object-view.component.spec.ts#ObjectViewComponent#84;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/object-view/object-view.component.spec.ts#TestBed#34;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/object-view/object-view.component.spec.ts#async#9;" target="C:/Users/andb7/WebstormProjects/AppT0ur/node_modules/@angular/core/testing/src/component_fixture.d.ts#ComponentFixture#302;">
+      <point x="98.25" y="-58.5" />
+      <point x="611.25" y="346.0" />
+      <point x="866.0" y="346.0" />
+      <point x="0.0" y="25.5" />
+    </edge>
+    <edge source="C:/Users/andb7/WebstormProjects/AppT0ur/src/app/object-view/object-view.component.spec.ts#ComponentFixture#16;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/object-view/object-view.component.spec.ts#ObjectViewComponent#84;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/object-view/object-view.component.spec.ts#TestBed#34;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/object-view/object-view.component.spec.ts#async#9;" target="C:/Users/andb7/WebstormProjects/AppT0ur/node_modules/@angular/core/testing/src/test_bed.d.ts#TestBed#1089;">
+      <point x="-98.25" y="-58.5" />
+      <point x="414.75" y="346.0" />
+      <point x="230.0" y="346.0" />
+      <point x="0.0" y="25.5" />
+    </edge>
+    <edge source="C:/Users/andb7/WebstormProjects/AppT0ur/src/app/object-view/object-view.component.ts#ActivatedRoute#216;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/object-view/object-view.component.ts#ArchitectService#57;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/object-view/object-view.component.ts#Component#8;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/object-view/object-view.component.ts#ObjectID#112;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/object-view/object-view.component.ts#ObjectOfView#163;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/object-view/object-view.component.ts#ObjectViewComponent#292;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/object-view/object-view.component.ts#OnInit#19;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/object-view/object-view.component.ts#Subscription#264;" target="Component;">
+      <point x="-100.71428571428578" y="-102.5" />
+      <point x="518.2857142857142" y="91.0" />
+      <point x="72.0" y="91.0" />
+      <point x="0.0" y="25.5" />
+    </edge>
+    <edge source="C:/Users/andb7/WebstormProjects/AppT0ur/src/app/object-view/object-view.component.spec.ts#ComponentFixture#16;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/object-view/object-view.component.spec.ts#ObjectViewComponent#84;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/object-view/object-view.component.spec.ts#TestBed#34;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/object-view/object-view.component.spec.ts#async#9;" target="C:/Users/andb7/WebstormProjects/AppT0ur/node_modules/@angular/core/testing/src/async.d.ts#async#0;">
+      <point x="-32.75" y="-58.5" />
+      <point x="480.25" y="336.0" />
+      <point x="407.0" y="336.0" />
+      <point x="0.0" y="25.5" />
+    </edge>
+    <edge source="C:/Users/andb7/WebstormProjects/AppT0ur/src/app/object-view/object-view.component.ts#ActivatedRoute#216;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/object-view/object-view.component.ts#ArchitectService#57;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/object-view/object-view.component.ts#Component#8;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/object-view/object-view.component.ts#ObjectID#112;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/object-view/object-view.component.ts#ObjectOfView#163;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/object-view/object-view.component.ts#ObjectViewComponent#292;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/object-view/object-view.component.ts#OnInit#19;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/object-view/object-view.component.ts#Subscription#264;" target="C:/Users/andb7/WebstormProjects/AppT0ur/src/app/models/ObjectOfView.ts#ObjectOfView#907;">
+      <point x="0.0" y="-102.5" />
+      <point x="0.0" y="25.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.8551724137931035" x="642.5" y="241.5" />
+  <SelectedNodes>
+    <node>C:/Users/andb7/WebstormProjects/AppT0ur/node_modules/@angular/core/testing/src/test_bed.d.ts#TestBed#1089;</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>All</Category>
+  </Categories>
+  <VISIBILITY>Details</VISIBILITY>
+</Diagram>
+

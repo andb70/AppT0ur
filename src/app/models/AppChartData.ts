@@ -44,7 +44,7 @@ export class AppChartData {
       ],
       ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August'],
       AppChartData.ChartOptions1('Current absorption', true, 25, 17, 17, false,
-        false, 20, 17, true, null),
+        false, 20, 17, false, null),
       AppChartData.ChartOptions1('Current absorption', true, 14, 9, 9, false,
         false, 12, 9, false, null),
       [
@@ -66,7 +66,7 @@ export class AppChartData {
       ],
       ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August'],
       AppChartData.ChartOptions1('Current absorption after Lean', true, 25, 17, 17, false,
-        false, 20, 17, true, null),
+        false, 20, 17, false, null),
       AppChartData.ChartOptions1('Current absorption after Lean', true, 14, 9, 9, false,
         false, 12, 9, false, null),
       [
@@ -91,7 +91,7 @@ export class AppChartData {
       ],
       ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August'],
       AppChartData.ChartOptions1('Current absorption after Digital', true, 25, 17, 17, false,
-        false, 20, 17, true, null),
+        false, 20, 17, false, null),
       AppChartData.ChartOptions1('Current absorption after Digital', true, 14, 9, 9, false,
         false, 12, 9, false, null),
       [
@@ -114,7 +114,7 @@ export class AppChartData {
       ],
       ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August'],
       AppChartData.ChartOptions1('Water consumption', true, 25, 17, 17, false,
-        false, 20, 17, true, null),
+        false, 20, 17, false, null),
       AppChartData.ChartOptions1('Water consumption', true, 14, 9, 9, false,
         false, 12, 9, false, null),
       [
@@ -136,7 +136,7 @@ export class AppChartData {
       ],
       ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August'],
       AppChartData.ChartOptions1('Water consumption after Lean', true, 25, 17, 17, false,
-        false, 20, 17, true, null),
+        false, 20, 17, false, null),
       AppChartData.ChartOptions1('Wastege  after Lean', true, 14, 9, 9, false,
         false, 12, 9, false, null),
       [
@@ -159,7 +159,7 @@ export class AppChartData {
       ],
       ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August'],
       AppChartData.ChartOptions1('Water consumption after Digital', true, 25, 17, 17, false,
-        false, 20, 17, true, null, true),
+        false, 20, 17, false, null, true),
       AppChartData.ChartOptions1('Water consumption after Digital', true, 14, 9, 9, false,
         false, 12, 9, false, null, true),
       [
@@ -243,7 +243,11 @@ export class AppChartData {
         return (
           data['datasets'][0]['data'][tooltipItem['index']] + text /*' pieces'   ' pieces/man-hour'*/
         );
-      }
+      }/*,
+      labelColor: {
+        borderColor: '#FFFFDD',
+        backgroundColor: '#440000'
+      }*/
     };
   }
 
@@ -256,7 +260,11 @@ export class AppChartData {
         const currentValue = dataset.data[tooltipItem.index];
 
         return currentValue + text /*'%'*/;
-      }
+      }/*,
+      labelColor: {
+        borderColor: '#FFFFDD',
+        backgroundColor: '#440000'
+      }*/
     };
   }
 
@@ -397,17 +405,17 @@ export class AppChartData {
 }
 
 export class ChartSerie {
-  constructor(public data: Array<number>, public label: string) {
+  constructor(public data: number[], public label: string) {
   }
 }
 
 export class ChartDataRecord {
   public name: string;
-  public lineChartData: Array<ChartSerie>;
-  public lineChartLabels: Array<string>;
+  public lineChartData: ChartSerie[];
+  public lineChartLabels: string[];
   public lineChartOptions: any;
   public lineChartOptionsThumbnail: any;
-  public lineChartColors: Array<LineChartColors>;
+  public lineChartColors: LineChartColors[];
   public lineChartLegend: boolean;
   public lineChartType: string;
   public chartID: ObjectID;
@@ -417,11 +425,11 @@ export class ChartDataRecord {
 
   }
   public static createChartRecord(name: string,
-                                  lineChartData: Array<ChartSerie>,
-                                  lineChartLabels: Array<string>,
+                                  lineChartData: ChartSerie[],
+                                  lineChartLabels: string[],
                                   lineChartOptions: any,
                                   lineChartOptionsThumbnail: any,
-                                  lineChartColors: Array<LineChartColors>,
+                                  lineChartColors: LineChartColors[],
                                   lineChartLegend: boolean,
                                   lineChartType: string,
                                   chartID: ObjectID,
@@ -442,7 +450,8 @@ export class ChartDataRecord {
 
   public static cloneSerie(src: ChartSerie): ChartSerie {
 
-    const data: Array<number> = new Array(src.data.length);
+    const data: number[] = [];
+    data.length = src.data.length;
     for (let i = 0; i < src.data.length; i++) {
       data[i] = +src.data[i].toString();
     }
@@ -464,13 +473,13 @@ export class ChartDataRecord {
 
     dest.name = this.name.toString();
 
-    const chartData: Array<ChartSerie> = [];
+    const chartData: ChartSerie[] = [];
     this.lineChartData.forEach((record) => {
       chartData.push(ChartDataRecord.cloneSerie(record));
     });
     dest.lineChartData = chartData;
 
-    const chartLabels: Array<string> = [];
+    const chartLabels: string[] = [];
     this.lineChartLabels.forEach((record) => {
       chartLabels.push(record.toString());
     });
@@ -481,7 +490,7 @@ export class ChartDataRecord {
 
     dest.lineChartOptionsThumbnail = this.lineChartOptionsThumbnail;
 
-    const chartColors: Array<LineChartColors> = [];
+    const chartColors: LineChartColors[] = [];
     this.lineChartColors.forEach((record) => {
       chartColors.push(record);
     });
@@ -496,7 +505,7 @@ export class ChartDataRecord {
 }
 
 export class LineChartColors {
-  constructor(public backgroundColor: Array<any>,
+  constructor(public backgroundColor: any[],
               public borderColor,
               public borderWidth,
               public pointBackgroundColor = null,

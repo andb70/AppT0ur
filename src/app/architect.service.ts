@@ -234,6 +234,7 @@ export class ArchitectService {
 
     console.log('onChartRoute active chart is:', this.getActiveChart().chartID);
     this.router.navigate([this.getActiveChart().routerLink()]);
+    console.log('onChartRoute chartRoute');
     this.chartRoute.emit(this.getActiveChart());
     console.log('onChartRoute Routed to ' + this.getActiveChart().chartID);
   }

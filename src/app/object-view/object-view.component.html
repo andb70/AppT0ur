@@ -2,6 +2,9 @@
   <div *ngFor="let node of data.children"
        id="{{node.childId}}"
        (mouseover)="onDivMouseOver(node.id)"
+       (mouseleave)="onDivMouseLeave(node.id)"
        (click)="onClick(node.id)">
+    <div
+      [ngClass] ="{'divOver': divOver(node.id)}"></div>
   </div>
 </div>

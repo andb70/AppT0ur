@@ -17,7 +17,7 @@ export class ObjectViewComponent implements OnInit {
   private _paramsSub: Subscription;
   ObjectID = ObjectID;
   data: ObjectOfView;
-
+  private onDiv: ObjectID  = ObjectID.notSet;
   get css(): string {
     return this.data.css;
   }
@@ -63,11 +63,17 @@ export class ObjectViewComponent implements OnInit {
     this.service.onMouseOver({curIndex: index});
   }
 
-  onDivMouseOver(index) {
+  onDivMouseOver(index: ObjectID) {
     // console.log('ObjectOfView divMouseover ' + index);
+    this.onDiv = index;
     this.service.onMouseOver({curIndex: index});
   }
-
+  onDivMouseLeave(index: ObjectID) {
+    this.onDiv = ObjectID.notSet;
+  }
+  divOver(index: ObjectID): boolean {
+    return index == this.onDiv;
+  }
   onClick(index) {
     // console.log('ObjectOfView click ' + index);
     this.service.onRoute(index);

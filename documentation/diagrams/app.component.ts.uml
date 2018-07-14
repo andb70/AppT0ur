@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JavaScript-modules-diagram</ID>
+  <OriginalElement>C:/Users/andb7/WebstormProjects/AppT0ur/src/app/app.component.ts</OriginalElement>
+  <nodes>
+    <node x="188.0" y="101.0">C:/Users/andb7/WebstormProjects/AppT0ur/src/app/app.component.ts#ArchitectService#51;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/app.component.ts#Component#9;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/app.component.ts#ObjectID#105;</node>
+    <node x="188.0" y="0.0">C:/Users/andb7/WebstormProjects/AppT0ur/src/app/architect.service.ts#ArchitectService#2048;</node>
+    <node x="366.0" y="0.0">Component;</node>
+    <node x="0.0" y="0.0">C:/Users/andb7/WebstormProjects/AppT0ur/src/app/models/object-id.enum.ts#ObjectID#0;</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="C:/Users/andb7/WebstormProjects/AppT0ur/src/app/app.component.ts#ArchitectService#51;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/app.component.ts#Component#9;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/app.component.ts#ObjectID#105;" target="C:/Users/andb7/WebstormProjects/AppT0ur/src/app/models/object-id.enum.ts#ObjectID#0;">
+      <point x="-52.66666666666666" y="-47.5" />
+      <point x="214.33333333333334" y="76.0" />
+      <point x="84.0" y="76.0" />
+      <point x="0.0" y="25.5" />
+    </edge>
+    <edge source="C:/Users/andb7/WebstormProjects/AppT0ur/src/app/app.component.ts#ArchitectService#51;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/app.component.ts#Component#9;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/app.component.ts#ObjectID#105;" target="C:/Users/andb7/WebstormProjects/AppT0ur/src/app/architect.service.ts#ArchitectService#2048;">
+      <point x="0.0" y="-47.5" />
+      <point x="0.0" y="25.5" />
+    </edge>
+    <edge source="C:/Users/andb7/WebstormProjects/AppT0ur/src/app/app.component.ts#ArchitectService#51;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/app.component.ts#Component#9;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/app.component.ts#ObjectID#105;" target="Component;">
+      <point x="52.66666666666666" y="-47.5" />
+      <point x="319.66666666666663" y="76.0" />
+      <point x="438.0" y="76.0" />
+      <point x="0.0" y="25.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="255.0" y="98.0" />
+  <SelectedNodes>
+    <node>C:/Users/andb7/WebstormProjects/AppT0ur/src/app/models/object-id.enum.ts#ObjectID#0;</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>All</Category>
+  </Categories>
+  <VISIBILITY>Details</VISIBILITY>
+</Diagram>
+

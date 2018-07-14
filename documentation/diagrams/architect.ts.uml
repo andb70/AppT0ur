@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JavaScript-modules-diagram</ID>
+  <OriginalElement>C:/Users/andb7/WebstormProjects/AppT0ur/src/app/architect.service.ts</OriginalElement>
+  <nodes>
+    <node x="1084.0" y="0.0">C:/Users/andb7/WebstormProjects/AppT0ur/src/app/models/AppChartData.ts#AppChartData#77;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/models/AppChartData.ts#ChartDataRecord#12377;</node>
+    <node x="0.0" y="0.0">C:/Users/andb7/WebstormProjects/AppT0ur/src/app/models/ObjectOfView.ts#NodeOfView#6297;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/models/ObjectOfView.ts#ObjectOfView#907;</node>
+    <node x="368.0" y="11.0">C:/Users/andb7/WebstormProjects/AppT0ur/src/app/models/TreeBuilder.ts#TreeOfView#1493;</node>
+    <node x="645.5" y="153.0">C:/Users/andb7/WebstormProjects/AppT0ur/src/app/architect.service.ts#AppChartData#122;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/architect.service.ts#ChartDataRecord#136;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/architect.service.ts#EventEmitter#8;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/architect.service.ts#Injectable#22;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/architect.service.ts#NodeOfView#280;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/architect.service.ts#ObjectID#72;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/architect.service.ts#ObjectOfView#292;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/architect.service.ts#Output#34;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/architect.service.ts#Router#240;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/architect.service.ts#TreeOfView#191;</node>
+    <node x="920.0" y="0.0">Injectable;Output;</node>
+    <node x="536.0" y="11.0">C:/Users/andb7/WebstormProjects/AppT0ur/node_modules/@angular/core/src/event_emitter.d.ts#EventEmitter#235;</node>
+    <node x="180.0" y="11.0">C:/Users/andb7/WebstormProjects/AppT0ur/src/app/models/object-id.enum.ts#ObjectID#0;</node>
+    <node x="748.0" y="11.0">C:/Users/andb7/WebstormProjects/AppT0ur/node_modules/@angular/router/src/router.d.ts#Router#3905;</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="C:/Users/andb7/WebstormProjects/AppT0ur/src/app/architect.service.ts#AppChartData#122;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/architect.service.ts#ChartDataRecord#136;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/architect.service.ts#EventEmitter#8;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/architect.service.ts#Injectable#22;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/architect.service.ts#NodeOfView#280;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/architect.service.ts#ObjectID#72;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/architect.service.ts#ObjectOfView#292;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/architect.service.ts#Output#34;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/architect.service.ts#Router#240;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/architect.service.ts#TreeOfView#191;" target="C:/Users/andb7/WebstormProjects/AppT0ur/src/app/models/ObjectOfView.ts#NodeOfView#6297;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/models/ObjectOfView.ts#ObjectOfView#907;">
+      <point x="-57.75" y="-124.5" />
+      <point x="670.25" y="123.0" />
+      <point x="120.0" y="123.0" />
+      <point x="40.0" y="36.5" />
+    </edge>
+    <edge source="C:/Users/andb7/WebstormProjects/AppT0ur/src/app/architect.service.ts#AppChartData#122;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/architect.service.ts#ChartDataRecord#136;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/architect.service.ts#EventEmitter#8;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/architect.service.ts#Injectable#22;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/architect.service.ts#NodeOfView#280;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/architect.service.ts#ObjectID#72;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/architect.service.ts#ObjectOfView#292;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/architect.service.ts#Output#34;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/architect.service.ts#Router#240;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/architect.service.ts#TreeOfView#191;" target="C:/Users/andb7/WebstormProjects/AppT0ur/node_modules/@angular/router/src/router.d.ts#Router#3905;">
+      <point x="8.25" y="-124.5" />
+      <point x="736.25" y="93.0" />
+      <point x="824.0" y="93.0" />
+      <point x="0.0" y="25.5" />
+    </edge>
+    <edge source="C:/Users/andb7/WebstormProjects/AppT0ur/src/app/architect.service.ts#AppChartData#122;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/architect.service.ts#ChartDataRecord#136;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/architect.service.ts#EventEmitter#8;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/architect.service.ts#Injectable#22;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/architect.service.ts#NodeOfView#280;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/architect.service.ts#ObjectID#72;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/architect.service.ts#ObjectOfView#292;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/architect.service.ts#Output#34;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/architect.service.ts#Router#240;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/architect.service.ts#TreeOfView#191;" target="C:/Users/andb7/WebstormProjects/AppT0ur/src/app/models/AppChartData.ts#AppChartData#77;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/models/AppChartData.ts#ChartDataRecord#12377;">
+      <point x="57.75" y="-124.5" />
+      <point x="785.75" y="123.0" />
+      <point x="1125.25" y="123.0" />
+      <point x="-41.25" y="36.5" />
+    </edge>
+    <edge source="C:/Users/andb7/WebstormProjects/AppT0ur/src/app/architect.service.ts#AppChartData#122;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/architect.service.ts#ChartDataRecord#136;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/architect.service.ts#EventEmitter#8;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/architect.service.ts#Injectable#22;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/architect.service.ts#NodeOfView#280;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/architect.service.ts#ObjectID#72;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/architect.service.ts#ObjectOfView#292;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/architect.service.ts#Output#34;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/architect.service.ts#Router#240;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/architect.service.ts#TreeOfView#191;" target="C:/Users/andb7/WebstormProjects/AppT0ur/node_modules/@angular/core/src/event_emitter.d.ts#EventEmitter#235;">
+      <point x="-8.25" y="-124.5" />
+      <point x="719.75" y="93.0" />
+      <point x="632.0" y="93.0" />
+      <point x="0.0" y="25.5" />
+    </edge>
+    <edge source="C:/Users/andb7/WebstormProjects/AppT0ur/src/app/architect.service.ts#AppChartData#122;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/architect.service.ts#ChartDataRecord#136;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/architect.service.ts#EventEmitter#8;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/architect.service.ts#Injectable#22;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/architect.service.ts#NodeOfView#280;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/architect.service.ts#ObjectID#72;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/architect.service.ts#ObjectOfView#292;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/architect.service.ts#Output#34;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/architect.service.ts#Router#240;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/architect.service.ts#TreeOfView#191;" target="C:/Users/andb7/WebstormProjects/AppT0ur/src/app/models/object-id.enum.ts#ObjectID#0;">
+      <point x="-41.25" y="-124.5" />
+      <point x="686.75" y="113.0" />
+      <point x="264.0" y="113.0" />
+      <point x="0.0" y="25.5" />
+    </edge>
+    <edge source="C:/Users/andb7/WebstormProjects/AppT0ur/src/app/architect.service.ts#AppChartData#122;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/architect.service.ts#ChartDataRecord#136;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/architect.service.ts#EventEmitter#8;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/architect.service.ts#Injectable#22;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/architect.service.ts#NodeOfView#280;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/architect.service.ts#ObjectID#72;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/architect.service.ts#ObjectOfView#292;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/architect.service.ts#Output#34;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/architect.service.ts#Router#240;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/architect.service.ts#TreeOfView#191;" target="Injectable;Output;">
+      <point x="41.25" y="-124.5" />
+      <point x="769.25" y="113.0" />
+      <point x="1028.0" y="113.0" />
+      <point x="36.0" y="36.5" />
+    </edge>
+    <edge source="C:/Users/andb7/WebstormProjects/AppT0ur/src/app/architect.service.ts#AppChartData#122;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/architect.service.ts#ChartDataRecord#136;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/architect.service.ts#EventEmitter#8;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/architect.service.ts#Injectable#22;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/architect.service.ts#NodeOfView#280;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/architect.service.ts#ObjectID#72;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/architect.service.ts#ObjectOfView#292;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/architect.service.ts#Output#34;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/architect.service.ts#Router#240;C:/Users/andb7/WebstormProjects/AppT0ur/src/app/architect.service.ts#TreeOfView#191;" target="C:/Users/andb7/WebstormProjects/AppT0ur/src/app/models/TreeBuilder.ts#TreeOfView#1493;">
+      <point x="-24.75" y="-124.5" />
+      <point x="703.25" y="103.0" />
+      <point x="442.0" y="103.0" />
+      <point x="0.0" y="25.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.8794326241134752" x="624.5" y="201.0" />
+  <SelectedNodes>
+    <node>C:/Users/andb7/WebstormProjects/AppT0ur/node_modules/@angular/router/src/router.d.ts#Router#3905;</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>All</Category>
+  </Categories>
+  <VISIBILITY>Details</VISIBILITY>
+</Diagram>
+

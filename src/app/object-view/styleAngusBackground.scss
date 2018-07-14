@@ -1,5 +1,12 @@
 // BACKGROUND HOME
-
+.divOver {
+  background-color: blue;
+  opacity: 0.1;
+  margin:10px;
+  width: calc(100% - 20px);
+  height: calc(100% - 20px);
+  border-radius: 5px;
+}
 .baH {
   // Sfondo piantina generale impianto Angus Default
   background-image: url("../../../documentation/PiantinaAngus.svg");

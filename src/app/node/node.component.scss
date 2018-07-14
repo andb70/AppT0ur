@@ -1,11 +1,32 @@
-.tree-node-content-wrapper-active {
+/*.tree-node-content-wrapper-active {
   background-color: darkgreen;
-}
+}*/
 
 .node-content-wrapper-active {
-  background-color: darkgoldenrod;
+  background-color: aquamarine;
+  color: #00004d;
+  font-weight: bold;
 }
-
+.node-content-wrapper-lean {
+  background-color: #32b61e;
+  width: 16px;
+  height: 20px;
+  margin: -5px;
+  left: 0px;
+  margin-right: 10px;
+}
+.node-content-wrapper-digital {
+   background-color: #b63a0e;
+   width: 16px;
+   height: 20px;
+  margin: -5px;
+  left: 0px;
+  margin-right: 10px;
+ }
+.displayInline {
+  display: inline-block;
+}
+/*
 .tree-node {
   background-color: aquamarine;
 }
@@ -13,3 +34,4 @@
 .tree-node.tree-node-disabled {
   background-color: #ff605f;
 }
+*/

@@ -1,22 +1,23 @@
 import {AfterViewInit, ChangeDetectorRef, Component, ElementRef, Input, OnInit, ViewChild} from '@angular/core';
 import {ChartDataRecord} from '../../models/AppChartData';
 import {ArchitectService} from '../../architect.service';
-import * as Chart from 'chart.js';
-import {NavigationEnd, Router} from '@angular/router';
+import {Router} from '@angular/router';
 import {Subscription} from 'rxjs';
-import {ChartConfiguration} from 'chart.js';
+import * as Chart from 'chart.js';
+import {ChartDataSets} from 'chart.js';
 
 @Component({
   selector: 'app-chart-mirror',
   template:
- `<div class="gridInNine"
-                  (mouseover)="chartHovered($event)"
-                  (click)="chartClicked($event)">
-    <canvas class="center"
-            width="320" height="255"
-            #chartCanvas>{{ chart }}
-    </canvas>
-  </div>`,
+      `
+    <div class="gridInNine"
+         (mouseover)="chartHovered($event)"
+         (click)="chartClicked($event)">
+      <canvas class="center"
+              width="320" height="255"
+              #chartCanvas>{{ chart }}
+      </canvas>
+    </div>`,
   styleUrls: ['../charts.css']
 })
 export class ChartMirrorComponent implements AfterViewInit {
@@ -40,16 +41,31 @@ export class ChartMirrorComponent implements AfterViewInit {
       creiamo il primo grafico
    */
   ngAfterViewInit(): void {
-    console.log('ChartMirror ngAfterViewInit', this.data);
+    console.log('ChartMirror ngAfterViewInit data is undefined');
     if (this.isBusy()) {
       this._subscription.unsubscribe();
     }
-    this._subscription = this.service.optionsChange.subscribe( (curView) => {
+    this._subscription = this.service.optionsChange.subscribe((curView) => {
       console.log('ChartMirror', curView);
-      // todo: in questo punto si gestiscono i cambiamenti dovuti all'attivazione delle opzioni
-      // scaricare il grafico corrente e ricaricare
+       // scaricare il grafico corrente e ricaricare
+
+      try {
+        console.log('ChartMirror destroy chart', this.data);
+        this.chart.destroy();
+      } catch (e) {
+        console.log('ChartMirror destroy fail', e);
+      }
+      this.data = this.service.getActiveChart();
+      this.createChart();
     });
+
     this.service.chartRoute.subscribe(data => {
+      try {
+        console.log('ChartMirror destroy chart', this.data);
+        this.chart.destroy();
+      } catch (e) {
+        console.log('ChartMirror destroy fail', e);
+      }
       this.data = data;
       this.createChart();
     });
@@ -66,16 +82,79 @@ export class ChartMirrorComponent implements AfterViewInit {
   createChart() {
     console.log('createChart context', this.chartCanvas, this.context);
     this.context = this.chartCanvas.nativeElement.getContext('2d');
+    /*
+    class Chart {
+    static readonly Chart: typeof Chart;
+    constructor(
+        context: string | CanvasRenderingContext2D | HTMLCanvasElement | ArrayLike<CanvasRenderingContext2D | HTMLCanvasElement>,
+        options: Chart.ChartConfiguration
+    );
+    config: Chart.ChartConfiguration;
+    data: Chart.ChartData;
+
+      interface ChartConfiguration {
+          type?: ChartType | string;
+          data?: ChartData;
+          options?: ChartOptions;
+
+      type ChartType = 'line' | 'bar' | 'horizontalBar' | 'radar' | 'doughnut' | 'polarArea' | 'bubble' | 'pie';
+
+      interface ChartData {
+          labels?: Array<string | string[]>;
+          datasets?: ChartDataSets[];
+      }
+
+        interface ChartDataSets {
+            cubicInterpolationMode?: 'default' | 'monotone';
+            backgroundColor?: ChartColor | ChartColor[];
+            borderWidth?: number | number[];
+            borderColor?: ChartColor | ChartColor[];
+            borderCapStyle?: string;
+            borderDash?: number[];
+            borderDashOffset?: number;
+            borderJoinStyle?: string;
+            borderSkipped?: PositionType;
+            data?: number[] | ChartPoint[];
+            fill?: boolean | number | string;
+            hoverBackgroundColor?: string | string[];
+            hoverBorderColor?: string | string[];
+            hoverBorderWidth?: number | number[];
+            label?: string;
+            lineTension?: number;
+            steppedLine?: 'before' | 'after' | boolean;
+            pointBorderColor?: ChartColor | ChartColor[];
+            pointBackgroundColor?: ChartColor | ChartColor[];
+            pointBorderWidth?: number | number[];
+            pointRadius?: number | number[];
+            pointHoverRadius?: number | number[];
+            pointHitRadius?: number | number[];
+            pointHoverBackgroundColor?: ChartColor | ChartColor[];
+            pointHoverBorderColor?: ChartColor | ChartColor[];
+            pointHoverBorderWidth?: number | number[];
+            pointStyle?: PointStyle | HTMLImageElement | Array<PointStyle | HTMLImageElement>;
+            xAxisID?: string;
+            yAxisID?: string;
+            type?: string;
+            hidden?: boolean;
+            hideInLegendAndTooltip?: boolean;
+            showLine?: boolean;
+            stack?: string;
+            spanGaps?: boolean;
+        }
+    type ChartColor = string | CanvasGradient | CanvasPattern | string[];
+
+     */
     this.chart = new Chart(this.context, {
       type: this.chartType,
       data: {
         labels: this.labels,
-        datasets: this.datasets // todo: qui bisogna passare i colori delle serie
+        datasets: this.datasets
       },
       options: this.options
     });
     this.chart.update();
   }
+
 
   // events
   public chartClicked(e: any): void {
@@ -90,11 +169,22 @@ export class ChartMirrorComponent implements AfterViewInit {
     this.service.onMouseOver(this.data.chartID);
   }
 
-  get datasets() {
+  get datasets(): ChartDataSets[] {
     if (this.data == null) {
       return;
     }
-    return this.data.lineChartData;
+    /*return this.data.lineChartData;*/
+    let cds: ChartDataSets[] = [];
+    for (let i = 0; i < this.data.lineChartData.length; i++) {
+      cds.push({
+        borderColor: this.data.lineChartColors[i].borderColor,
+        backgroundColor: this.data.lineChartColors[i].backgroundColor,
+        borderWidth: this.data.lineChartColors[i].borderWidth,
+        data: this.data.lineChartData[i].data,
+        label: this.data.lineChartData[i].label
+      } as ChartDataSets);
+    }
+    return cds;
   }
 
   get labels() {

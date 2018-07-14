@@ -1,6 +1,5 @@
 import {ObjectID} from './object-id.enum';
-import {OptionOfView, OptionType} from './OptionBuilder';
-import {AppChartData} from './AppChartData';
+import {OptionOfView} from './OptionBuilder';
 
 /* todo: rendere ObjectOfView ricorsiva portando dentro i membri di ChildOfView
 *  e trasformando objects in     objects: ObjectOfView[];
@@ -29,7 +28,8 @@ export class ObjectOfView implements NodeOfView {
   private _children: ObjectOfView[] = [];
   public parent: ObjectOfView = null;
   private _activeNode: ObjectOfView = null;
-
+  private _hasLean = false;
+  private _hasDigital = false;
   css: string;
   childId: string;
   contextID: ObjectID;
@@ -55,8 +55,8 @@ export class ObjectOfView implements NodeOfView {
   updateOptions() {
     console.log('updateLeanOptions lean: ', this.leanOptions.options, this.digitalOptions.options);
     let cssResult: string = this.leanOptions.cssDefault;
-    let hasLean: boolean;
-    let hasDigital: boolean;
+    let hasLean = false;
+    let hasDigital = false;
 
 
     if (this.btnLean) {
@@ -81,7 +81,10 @@ export class ObjectOfView implements NodeOfView {
     this.chartsVisible = [
       !(hasLean || hasDigital), hasLean && !hasDigital, hasDigital,
       false, true, false,
-      true, true, true];  }
+      true, true, true];
+    this._hasLean = hasLean;
+    this._hasDigital = hasDigital;
+  }
 
   get btnLean(): boolean {
     return this.leanOptions.btnMain;
@@ -224,6 +227,15 @@ export class ObjectOfView implements NodeOfView {
     return this._children;
   }
 
+  get hasDigital(): boolean {
+    return this._hasLean;
+  }
+
+  get hasLean(): boolean {
+    return this._hasDigital;
+  }
+
+
   /*appendChild(child: ObjectOfView) {
     this._children.push(child);
   }
@@ -253,11 +265,12 @@ export interface NodeOfView {
   children: NodeOfView[];
   isSelected: boolean;
   data: ObjectOfView;
+  hasLean: boolean;
+  hasDigital: boolean;
 }
 
 export class ChildOfView { // obsoleto
   css: string;
-  routerLink: string;
   childId: string;
   contextID: ObjectID;
 
