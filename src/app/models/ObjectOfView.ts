@@ -87,7 +87,6 @@ export class ObjectOfView implements NodeOfView {
       true, true, true];
 
     if (this._hasLean === hasLean && this._hasDigital === hasDigital) {
-      this._change = false;
       return;
     }
     // solo se lo stato dei bottoni è cambiato settiamo l'output:
@@ -111,12 +110,13 @@ export class ObjectOfView implements NodeOfView {
   }
 
   set btnLean(value: boolean) {
+    this._change = false;
     if (this.leanOptions.btnMain !== value) {
       this.leanOptions.btnMain = value;
       this.updateOptions();
+      return;
     }
   }
-
 
   get btnDigital(): boolean {
     return this.digitalOptions.btnMain && this.btnDigitalEnable;
@@ -131,6 +131,7 @@ export class ObjectOfView implements NodeOfView {
   }
 
   set btnDigital(value: boolean) {
+    this._change = false;
     if (this.digitalOptions.btnMain !== value) {
       this.digitalOptions.btnMain = value;
       this.updateOptions();
@@ -140,6 +141,7 @@ export class ObjectOfView implements NodeOfView {
 
   setBtnLeanOption(index: number) {
     console.log('setBtnLeanOption', index);
+    this._change = false;
     this.leanOptions.options.forEach(option => {
       console.log('check option', option);
       if (option.contextID === index) { // TSLint correction == should be ===
@@ -154,10 +156,10 @@ export class ObjectOfView implements NodeOfView {
         return;
       }
     });
-
   }
 
   setBtnDigitalOption(index: number) {
+    this._change = false;
     this.digitalOptions.options.forEach(option => {
       if (option.contextID === index) { // TSLint correction == should be ===
         option.checked = !option.checked;
