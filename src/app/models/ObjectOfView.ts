@@ -1,5 +1,6 @@
 import {ObjectID} from './object-id.enum';
 import {OptionOfView} from './OptionBuilder';
+import {EventEmitter, Output} from '@angular/core';
 
 /* todo: rendere ObjectOfView ricorsiva portando dentro i membri di ChildOfView
 *  e trasformando objects in     objects: ObjectOfView[];
@@ -30,6 +31,8 @@ export class ObjectOfView implements NodeOfView {
   private _activeNode: ObjectOfView = null;
   private _hasLean = false;
   private _hasDigital = false;
+  private _change = false;
+  @Output() change = new EventEmitter();
   css: string;
   childId: string;
   contextID: ObjectID;
@@ -75,17 +78,30 @@ export class ObjectOfView implements NodeOfView {
         }
       });
     }
-    console.log('updateOptions css: ' + cssResult);
+    // console.log('updateOptions css: ' + cssResult);
     this.css = cssResult;
 
     this.chartsVisible = [
       !(hasLean || hasDigital), hasLean && !hasDigital, hasDigital,
       false, true, false,
       true, true, true];
+
+    if (this._hasLean === hasLean && this._hasDigital === hasDigital) {
+      this._change = false;
+      return;
+    }
+    // solo se lo stato dei bottoni è cambiato settiamo l'output:
+    // _change = true
+    // scateniamo l'evento per l'aggiornamento
     this._hasLean = hasLean;
     this._hasDigital = hasDigital;
+    this._change = true;
+    this.change.emit();
   }
 
+  get optionChanged(): boolean {
+    return this._change;
+  }
   get btnLean(): boolean {
     return this.leanOptions.btnMain;
   }

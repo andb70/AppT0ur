@@ -27,10 +27,26 @@ export class ChartMirrorComponent implements AfterViewInit {
 
   chart;
   data: ChartDataRecord;
-  private _subscription: Subscription;
+  private _OptionSub: Subscription;
+  private _RouterSub: Subscription;
 
   constructor(private router: Router, public service: ArchitectService, private cdRef: ChangeDetectorRef) {
     // console.log('Chart constructor');
+    this.service.chartUnsubscribe.subscribe(() => {
+      console.log('Chart constructor > chartUnsubscribe');
+      if (this.isOptionBusy()) {
+        this._OptionSub.unsubscribe();
+      }
+      if (this.isRouterBusy()) {
+        try {
+          console.log('ChartMirror.constructor destroy chart', this.data);
+          this.chart.destroy();
+        } catch (e) {
+          console.log('ChartMirror.constructor destroy fail', e);
+        }
+        this._RouterSub.unsubscribe();
+      }
+    });
   }
 
   /*  con il decorator @ViewChild aspettiamo di vedere il canvas dopo ViewInit
@@ -41,42 +57,48 @@ export class ChartMirrorComponent implements AfterViewInit {
       creiamo il primo grafico
    */
   ngAfterViewInit(): void {
-    console.log('ChartMirror ngAfterViewInit data is undefined');
-    if (this.isBusy()) {
-      this._subscription.unsubscribe();
-    }
-    this._subscription = this.service.optionsChange.subscribe((curView) => {
-      console.log('ChartMirror', curView);
-       // scaricare il grafico corrente e ricaricare
+    console.log('ChartMirror.ngAfterViewInit data is undefined');
+    /*    if (this.isOptionBusy()) {
+          console.log('ChartMirror >>>>>>>>>>>>>>> fuck isOptionBusy = true');
+          this._OptionSub.unsubscribe();
+        }*/
+    this._OptionSub = this.service.optionsChange.subscribe((curView) => {
+      console.log('ChartMirror.optionsChange', curView);
+      // scaricare il grafico corrente e ricaricare
 
-      try {
-        console.log('ChartMirror destroy chart', this.data);
-        this.chart.destroy();
-      } catch (e) {
-        console.log('ChartMirror destroy fail', e);
-      }
+      /*try {*/
+      console.log('ChartMirror.optionsChange destroy chart', this.data);
+      this.chart.destroy();
+      /*} catch (e) {
+        console.log('ChartMirror.optionsChange destroy fail', e);
+      }*/
       this.data = this.service.getActiveChart();
       this.createChart();
     });
 
-    this.service.chartRoute.subscribe(data => {
-      try {
-        console.log('ChartMirror destroy chart', this.data);
-        this.chart.destroy();
-      } catch (e) {
-        console.log('ChartMirror destroy fail', e);
-      }
+    this._RouterSub = this.service.chartRoute.subscribe(data => {
+      /*try {*/
+      console.log('ChartMirror.chartRoute destroy chart', this.data);
+      this.chart.destroy();
+      /*} catch (e) {
+        console.log('ChartMirror.chartRoute destroy fail', e);
+      }*/
       this.data = data;
       this.createChart();
     });
+
     this.data = this.service.getActiveChart();
     this.createChart();
     // solo in questo momento serve ad evitare l'errore di cambio valore dopo il check
     this.cdRef.detectChanges();
   }
 
-  isBusy() {
-    return (this._subscription && !this._subscription.closed);
+  isOptionBusy() {
+    return (this._OptionSub && !this._OptionSub.closed);
+  }
+
+  isRouterBusy() {
+    return (this._RouterSub && !this._RouterSub.closed);
   }
 
   createChart() {
@@ -158,7 +180,7 @@ export class ChartMirrorComponent implements AfterViewInit {
 
   // events
   public chartClicked(e: any): void {
-    console.log('Chart ' + this.data.chartID + ' chartClicked ObjectID.notSet isRouteBusy: ', this.isBusy());
+    console.log('Chart ' + this.data.chartID + ' chartClicked ObjectID.notSet isRouteBusy: ', this.isOptionBusy());
     /* qui il grafico deve chiudersi, lo facciamo semplicemente navigando
        verso la visualizzazione attiva
     */
@@ -174,7 +196,7 @@ export class ChartMirrorComponent implements AfterViewInit {
       return;
     }
     /*return this.data.lineChartData;*/
-    let cds: ChartDataSets[] = [];
+    const cds: ChartDataSets[] = [];
     for (let i = 0; i < this.data.lineChartData.length; i++) {
       cds.push({
         borderColor: this.data.lineChartColors[i].borderColor,

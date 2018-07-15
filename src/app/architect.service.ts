@@ -28,7 +28,7 @@ import {NodeOfView, ObjectOfView} from './models/ObjectOfView';
  * La struttura dati che contiene tutte le informazioni sull'impianto, esportabile
  * in un file JSON e quindi importabile allo stesso modo: definire una funzione di
  * serializzazione
- * contiene sia l'array dey records, o nodi, dell'impianto sia la struttura ad albero
+ * contiene sia l'array dei records, o nodi, dell'impianto sia la struttura ad albero
  * che lo rappresenta.
  *
  * L'intera struttura viene utilizzata per la visualizzazione treeView in modo che
@@ -73,6 +73,13 @@ export class ArchitectService {
      * imposta la prima visualizzazione
      */
     _treeOfView.data[ObjectID.viewHome].setActive();
+    // il codice seguente non funzionerà mai
+    /*this.curView.change.subscribe(() => {
+      // qui riceviamo la notifica che le opzioni sono cambiate
+      if (this.curView.optionChanged) {
+        this.optionsChange.emit(_treeOfView.activeNode);
+      }
+    });*/
   }
 
   get curView(): ObjectOfView {
@@ -178,29 +185,35 @@ export class ArchitectService {
    * giusto ogni volta che un'opzione viene attivata/disattivata
    *
    */
+  private emitOptionChange() {
+    // console.log('emitOptionChange',this.curView.optionChanged)
+    if (this.curView.optionChanged) {
+      this.optionsChange.emit(_treeOfView.activeNode);
+    }
+  }
   onbtnLean(value: boolean) {
     this.curView.btnLean = value;
     _chartData.chartsVisible = _treeOfView.activeNode.chartsVisible;
-    this.optionsChange.emit(_treeOfView.activeNode);
+    this.emitOptionChange();
   }
 
   onbtnDigital(value: boolean) {
     this.curView.btnDigital = value;
     _chartData.chartsVisible = _treeOfView.activeNode.chartsVisible;
-    this.optionsChange.emit(_treeOfView.activeNode);
+    this.emitOptionChange();
   }
 
   onLeanOption(btn) {
     console.log('service onBtnClick');
     _treeOfView.activeNode.setBtnLeanOption(btn.contextID);
     _chartData.chartsVisible = _treeOfView.activeNode.chartsVisible;
-    this.optionsChange.emit(_treeOfView.activeNode);
+    this.emitOptionChange();
   }
 
   onDigitalOption(btn) {
     _treeOfView.activeNode.setBtnDigitalOption(btn.contextID);
     _chartData.chartsVisible = _treeOfView.activeNode.chartsVisible;
-    this.optionsChange.emit(_treeOfView.activeNode);
+    this.emitOptionChange();
   }
 
   onRoute(contextID: ObjectID) {
@@ -245,7 +258,7 @@ export class ArchitectService {
 
 
   getActiveChart() {
-    console.log('getActiveChart', this._activeChart);
+    // console.log('getActiveChart', this._activeChart);
     return this._activeChart;
   }
 
